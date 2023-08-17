@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>GYM</title>
+
+  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="../../utils/signout/signout.css" />
+
+  <script src="../../utils/private-route.js" type="module"></script>
+  <script type="module">
+    import privateRoute from '../../utils/private-route.js';
+    privateRoute('gym');
+  </script>
+  <script src="home.js"></script>
+
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/utils/navbar/navbar.css" />
+  <link rel="stylesheet" href="/utils/signout/signout.css" />
+</head>
+
+<body onload="fetchDetails()">
+
+
+
+  <nav id="navbar">
+    <div class="nav-content">
+      <h1 id="title"><a href="/">Iron Fist</a></h1>
+
+   
+
+      <button  id="myBtn">
+        Sign Out
+      </button>
+    </div>
+  </nav>
+
+
+  <h1 id="name"></h1>
+  <h1>wallet : <span id="wallet">0</span></h1>
+  <div id="form-container">
+    <form onsubmit="moveAmount(event)">
+      <input type="number" placeholder="enter amount" name="amount" id="amount" required />
+      <input type="text" placeholder="xyz321@icici" name="upi" id="upi" required />
+      <button type="submit" id="myBtn" class="btnverify">Move to Account</button>
+    </form>
+  </div>
+
+
+  <div class="container">
+    <div class="token-verification">
+      <h2>User Token Verification</h2>
+      <form onsubmit="verifyToken(event)">
+        <label for="token">Enter Token:</label>
+        <input type="number" id="token" name="token" placeholder="4521" required />
+        <button class="btnverify">Verify Token</button>
+      </form>
+      <div id="verification-result"></div>
+    </div>
+
+    <table id="history-table">
+      <thead>
+        <tr>
+          <th>S NO.</th>
+          <th>Name</th>
+          <th>Amount</th>
+          <th>Date</th>
+          <th>Phone Number</th>
+        </tr>
+      </thead>
+
+    </table>
+  </div>
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Do you really want to Signout</p>
+      <!--<button >log out</button>-->
+      <button class="btn"   onclick="signOut()" >Sign Out</button>
+    </div>
+  </div>
+  <script src="/utils/signout/signout.js"></script>
+  <!-- modal end -->
+</body>
+
+</html>

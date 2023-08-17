@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+  <!--my CSS-->
+  <link rel="stylesheet" href="../home/home.css" />
+  <script src="gym.js"></script>
+  <link rel="stylesheet" href="gym.css" />
+
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/utils/navbar/navbar.css" />
+  <link rel="stylesheet" href="/utils/signout/signout.css" />
+
+</head>
+
+<body onload="fetchGym()">
+
+
+  <nav id="navbar">
+    <div class="nav-content">
+      <h1 id="title"><a href="/">Iron Fist</a></h1>
+      <ul id="list">
+        <li class="list-items"><a href="/workout.html">WORKOUT</a> </li>
+        <li class="list-items"><a href="../bmi.html">BMI</a></li>
+        <li class="list-items"><a href="../history/history.html">HISTORY</a></li>
+      </ul>
+      <div id="profile-div">
+        <button id="profile-btn">
+          <img width="40px" height="40px" src="/images/account2.png" />
+        </button>
+        <ul id="profile">
+          <li class="profile-items"><a href="../myaccount/my-account.html">My Account</a></li>
+          <li class="profile-items"><a href="../passes/mypasses.html">My Passes</a></li>
+          <li class="profile-items"> <a href="#" id="myBtn">SIGN OUT</a></li>
+        </ul>
+      </div>
+
+      <button id="menu" class="icon">
+        <i id="menu-icon" class="fa fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+
+
+
+  <div class="slideshow">
+    <div class="mySlides ">
+      <div class="numbertext"></div>
+      <img src="./images/image2.jpg" style="width:100%">
+      <div class="text"></div>
+    </div>
+
+    <div class="mySlides ">
+      <div class="numbertext"></div>
+      <img src="./images/image1.jpg" style="width:100%">
+      <div class="text"></div>
+    </div>
+
+
+
+    <div class="mySlides ">
+      <div class="numbertext"></div>
+      <img src="./images/image3.jpg" style="width:100%">
+      <div class="text"></div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+  <div class="container">
+    <div class="gym-info">
+      <div id="gym-name" class="gym-name"></div>
+      <div class="pass">
+        <h1>YOUR PASS</h1>
+        <h2 id="tok">Token Number : <h2 id="token"></h2>
+        </h2>
+        <h2 id="val">Validity : <span id="validity">0</span>
+          days
+        </h2>
+      </div>
+      <h1 id="gym-add"></h1>
+      <div id="facilities" class="facilities">
+
+      </div>
+      <div class="category">Category : <span id="category"></span></div>
+      <div class="category">Price : <span id="price"></span><span>/day</span></div>
+
+      <div id="passes" class="buttons">
+
+        <a href="#" target="_blank" class="button" id="gym-loc">Find Directions</a>
+
+      </div>
+      <div>
+
+      </div>
+      <h2 style="justify-self: flex-start !important;
+            align-self: flex-start !important;margin-left: 50px;color: #6d6d6d;">history</h2>
+      <table id="history">
+        <tr>
+          <th>S NO.</th>
+          <th>Date</th>
+          <th>Amount</th>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Do you really want to Signout</p>
+      <!--<button >log out</button>-->
+      <button class="btn btn-primary" onclick="signOut()" href="#" role="button">Sign Out</button>
+    </div>
+  </div>
+  <script src="/utils/signout/signout.js"></script>
+  <!-- modal end -->
+  <script src="/utils/navbar/navbar.js"></script>
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+
+    function signOut() {
+      localStorage.removeItem('token')
+      location.replace('../../index.html')
+    }
+
+    //sign out model js/////////////////////
+
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function () {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+///sign out js end//////////////////////
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+  
+  .container {
+    max-width: 75%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  /* Token Verification Styles */
+  .token-verification {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .token-verification h2 {
+    margin-top: 0;
+  }
+  
+  .token-verification form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .token-verification label {
+    margin-right: 10px;
+  }
+  
+  .token-verification input[type="text"],
+  .token-verification button {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-left: 15px;
+  }
+  
+  .token-verification input[type="text"] {
+    width: 200px;
+  }
+  
+  .token-verification button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .token-verification button:hover {
+    background-color: #45a049;
+  }
+  
+  #verification-result {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  /* Token Table Styles */
+  #history {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 14px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #history th,
+  #history td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+  
+  #history th {
+    background-color: #f0f0f0;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  #history tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  #history tbody tr:hover {
+    background-color: #e5e5e5;
+  }
+  
+  #history td {
+    word-break: break-word;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  @media screen and (max-width: 600px) {
+    #history td {
+      max-width: 100px;
+    }
+  }
+  
+  /* Responsive Table */
+  @media screen and (max-width: 768px) {
+    #history {
+      overflow-x: auto;
+    }
+  
+    #history td,
+    #history th {
+      white-space: nowrap;
+    }
+  }
+  /* ... previous CSS styles ... */
+
+/* Token Verification Styles */
+.token-verification button {
+background-color: #FF5722; /* Deep Orange */
+}
+
+/* Token Table Styles */
+#history th {
+background-color: #FF5722; /* Deep Orange */
+color: #fff;
+}

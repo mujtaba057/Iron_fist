@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="register.css"/>
+    <script src="./utils/is-logged.js" type="module"></script>
+    <script src="./utils/is-logged.js" type="module"></script>
+    <script type="module">
+      import isLogged from '../../utils/is-logged.js';
+      let role = isLogged()
+      if(role){
+        location.replace(`/${role}/home/home.html`)
+      }
+    </script>
+    <script src="register.js"></script>
+</head>
+
+<body>
+    <form onsubmit="register(event)">
+        <label for="username">Name:</label>
+        <input type="text" id="name" name="username" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="password2">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="password2" required>
+
+        <label for="phone">Phone:</label>
+		<input type="number" id="phone" name="phone" required>
+
+        <h1 id="gender">Gender:</h1>
+        <input type="radio" id="male" name="gender" value="male" checked>
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+
+        <button type="submit">Submit</button>
+
+    </form>
+</body>
+
+
+</html>

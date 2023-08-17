@@ -1,0 +1,68 @@
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
+  <meta charset="utf-8">
+  <title>mypasses</title>
+
+  <!--my CSS-->
+ <link rel="stylesheet" href="mypasses.css"/>
+
+  <script src="../../utils/private-route.js" type="module"></script>
+  <script type="module">
+    import privateRoute from '../../utils/private-route.js';
+    privateRoute('user');
+  </script>
+  <script src="mypasses.js"></script>
+
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/utils/navbar/navbar.css" />
+        <link rel="stylesheet" href="/utils/signout/signout.css"/>
+</head>
+
+<body onload="fetchPasses()">
+  <nav id="navbar">
+    <div class="nav-content">
+      <h1 id="title"><a href="/">Iron Fist</a></h1>
+      <ul id="list">
+        <li class="list-items"><a href="/workout.html">WORKOUT</a> </li>
+        <li class="list-items"><a href="../bmi.html">BMI</a></li>
+        <li class="list-items"><a href="../history/history.html">HISTORY</a></li>
+      </ul>
+      <div id="profile-div">
+        <button id="profile-btn">
+          <img width="40px" height="40px" src="/images/account2.png" />
+        </button>
+        <ul id="profile">
+          <li class="profile-items"><a href="../myaccount/my-account.html">My Account</a></li>
+          <li class="profile-items"><a href="../passes/mypasses.html">My Passes</a></li>
+          <li class="profile-items">  <a href="#" id="myBtn">SIGN OUT</a></li>
+        </ul>
+      </div>
+
+      <button id="menu" class="icon">
+        <i id="menu-icon" class="fa fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <div id="main">
+    <div id="container" class="container"> </div>
+  </div>
+
+ <!-- The Modal -->
+ <div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Do you really want to Signout</p>
+    <!--<button >log out</button>-->
+    <button class="btn btn-primary" onclick="signOut()" href="#" role="button">Sign Out</button>
+  </div>
+</div>
+<script src="/utils/signout/signout.js"></script>
+<!-- modal end -->
+<script src="/utils/navbar/navbar.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,159 @@
+#main {
+    margin-top: 90px;
+    padding-top: 20px;
+    text-align: center;
+    /* Use scroll instead of auto */
+    height: calc(100vh - 30px);
+    /* Set the height of #main to the viewport height minus the navbar height */
+}
+
+/* navbar */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+
+.nav-content {
+    display: flex;
+    top: 0;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(90deg, rgb(218, 218, 218,1) 0%, rgb(35, 189, 84) 35%, rgba(0,212,255,1) 100%);  
+    width: 100%;
+}
+
+h1 a {
+    color: black;
+    font-size: 40px;
+    text-decoration: none;
+}
+h1 a:hover {
+    opacity: 0.4;
+}
+#title{
+    padding-left: 20px;
+    line-height: 0.5;
+
+}
+
+#list {
+    list-style-type: none;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.list-items {
+    display: inline;
+    padding: 5px 0px;
+    margin: 0px 20px;
+}
+
+.list-items a {
+    color: black;
+    font-size: large;
+    text-decoration: none;
+
+}
+.list-items:hover  {
+    border-bottom: 4px solid #FF5722; /* Adjust the border color and thickness as per your preference */
+  }
+  
+#profile-btn {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    line-height: 1;
+}
+
+#profile {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0px 10px;
+    text-align: left;
+    right: 0;
+    z-index: 100;
+}
+
+#profile-div {
+    margin: 0px 20px;
+}
+
+.profile-items {
+    padding: 10px 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.profile-items:hover {
+    background-color: white;
+}
+
+.profile-items a {
+    color: white;
+    font-size: xx-large;
+    text-decoration: none;
+}
+
+#profile .profile-items:hover a {
+    color: black;
+    /* Change the color as per your preference */
+}
+
+#menu {
+    background-color: transparent;
+    border: none;
+    font-size: x-large;
+    display: none;
+}
+
+@media (max-width: 700px) {
+    #menu {
+        display: block;
+        margin-right: 30px;
+
+    }
+
+    #list {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        list-style-type: none;
+        right: 0;
+        top: 60px;
+        padding: 0px 0px;
+        margin: 10px 30px;
+
+        background-color: rgba(0, 0, 0, 0.4);
+
+    }
+
+    .list-items a {
+        color: white;
+        font-size: xx-large;
+    }
+
+    .list-items:hover {
+        background-color: white;
+
+    }
+
+
+
+    #profile-div {
+        margin: 10px 10px;
+        flex-grow: 1;
+        text-align: right;
+    }
+
+    #list .list-items:hover a {
+        color: black;
+        /* Change the color as per your preference */
+    }
+}
+
+/* end navbar */

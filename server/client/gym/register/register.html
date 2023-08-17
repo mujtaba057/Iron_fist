@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="register.css" />
+
+    <script src="./utils/is-logged.js" type="module"></script>
+  <script type="module">
+    import isLogged from '../../utils/is-logged.js';
+    let role = isLogged()
+    if(role){
+      location.replace(`/${role}/home/home.html`)
+    }
+  </script>
+  
+    <script src="register.js"></script>
+</head>
+
+<body>
+    <form onsubmit="register(event)">
+        <fieldset>
+            <legend>Gym Registration Form</legend>
+
+            <label for="name">Gym Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="images">Upload Images of Gym</label>
+            <input type="file" id="images" accept="image/*" name="images" multiple required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="password2">Re-enter Password</label>
+            <input type="password" id="password2" name="password2" required>
+
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" required>
+
+            <button type="button" onclick="getLocation()">Get Live Location</button>
+            <p id="demo"></p>
+
+            <div class="facilities">
+                <label>Facilities</label>
+                <div class="facility">
+                    <input type="checkbox" id="parking" name="parking" value='true'>
+                    <label for="parking">Parking</label>
+                </div>
+                <div class="facility">
+                    <input type="checkbox" id="ac" name="ac" value="true">
+                    <label for="ac">AC</label>
+                </div>
+                <div class="facility">
+                    <input type="checkbox" id="cardio" name="cardio" value="true">
+                    <label for="cardio">Cardio</label>
+                </div>
+
+                <div class="facility">
+                    <input type="checkbox" id="gym" name="gym" value="true">
+                    <label for="gym">Gym</label>
+                </div>
+
+
+                <div class="facility">
+                    <input type="checkbox" id="zumba" name="zumba" value="true">
+                    <label for="zumba">Zumba</label>
+                </div>
+                <div class="facility">
+                    <input type="checkbox" id="yoga" name="yoga" value="true">
+                    <label for="yoga">Yoga</label>
+                </div>
+                <div class="facility">
+                    <input type="checkbox" id="crossfit" name="crossfit" value="true">
+                    <label for="crossfit">Crossfit</label>
+                </div>
+                <div class="facility">
+                    <input type="checkbox" id="aerobic" name="aerobic" value="true">
+                    <label for="aerobic">Aerobic</label>
+                </div>
+                <div class="facility">
+                    <input type="checkbox" id="strength" name="strength" value="true">
+                    <label for="strength">Strength</label>
+                </div>
+            </div>
+
+            <div class="fees">
+                <label for="fees-per-month">Fees Per Month in ₹</label>
+                <input type="number" id="fees-per-month" name="fees-per-month" min="500" max="16000" required>
+            </div>
+
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+</body>
+
+</html>

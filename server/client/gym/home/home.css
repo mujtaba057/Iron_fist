@@ -1,0 +1,177 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+   
+  }
+
+  
+  .container {
+    max-width: 75%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+
+  
+  h1 {
+    text-align: center;
+  }
+  
+  /* Token Verification Styles */
+  .token-verification {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .token-verification h2 {
+    margin-top: 0;
+  }
+  
+  .token-verification form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .token-verification label {
+    margin-right: 10px;
+  }
+  
+  .token-verification input[type="text"],
+  .token-verification button {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-left: 15px;
+  }
+  
+  .token-verification input[type="text"] {
+    width: 200px;
+  }
+  
+  .token-verification button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .token-verification button,.btn:hover {
+    background-color: #45a049;
+  }
+  .btnverify:hover {
+    background-color: #45a049;
+  }
+  
+  #verification-result {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  /* Token Table Styles */
+  #history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #history-table th,
+  #history-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+  
+  #history-table th {
+    background-color: #f0f0f0;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  #history-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  #history-table tbody tr:hover {
+    background-color: #e5e5e5;
+  }
+  
+  #history-table td {
+    word-break: break-word;
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  @media screen and (max-width: 600px) {
+    #history-table td {
+      max-width: 100px;
+    }
+  }
+  
+  /* Responsive Table */
+  @media screen and (max-width: 768px) {
+    #history-table {
+      overflow-x: auto;
+    }
+  
+    #history-table td,
+    #history-table th {
+      white-space: nowrap;
+    }
+  }
+  /* ... previous CSS styles ... */
+
+/* Token Verification Styles */
+.token-verification button,.btn {
+background-color: #FF5722; /* Deep Orange */
+}
+
+/* Token Table Styles */
+#history-table th {
+background-color: #FF5722; /* Deep Orange */
+color: #fff;
+}
+#form-container{
+    text-align: center;
+    padding: auto;
+    margin: 40px auto;
+}
+#myBtn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  transition: background-color 0.2s ease;
+  margin-right: 10px;
+}
+#myBtn:hover{
+  background-color:#45a049;
+
+}
+#amount, #upi {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 400px;
+}
+#amount {
+  width: 200px;
+}

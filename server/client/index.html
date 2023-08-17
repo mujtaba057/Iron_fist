@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Iron Fist</title>
+
+  <!-- bootstrap css js only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!--fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://kit.fontawesome.com/2f55c2c482.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Ubuntu&display=swap" rel="stylesheet">
+  <!--my CSS-->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="index.js">
+
+  <script src="./utils/is-logged.js" type="module"></script>
+  <script type="module">
+    import isLogged from './utils/is-logged.js';
+    let role = isLogged()
+    if(role){
+      location.replace(`/${role}/home/home.html`)
+    }
+  </script>
+</head>
+
+<body>
+
+  <section id="title">
+    <div class="container-fluid">
+      <!-- Nav Bar -->
+      <nav class="navbar navbar-expand-lg  ">
+        <!---- <div class="container-fluid">-->
+        <a class="navbar-brand fw-bold " href="#">IRON FIST</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!--<li class="nav-item">
+                     <a class="nav-link " aria-current="#page" href="workout.html">WORKOUT</a>
+                   </li>-->
+            <li class="nav-item">
+              <a class="nav-link" href="#pricing">EXPLORE GYM PASS</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="bmi.html">BMI</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="workout.html">WORKOUT</a>
+            </li>
+        </div>
+
+        <!---- <li class="nav-item">
+                      
+                           <a class="nav-link " href="user_homepage.html">Sign Up</a>
+                          </li>   
+                       !--<button type="button" class="btn btn-lg btn-block btn-dark">Sign Up</button>
+                    
+                 </ul>-->
+        <!--signin/signup-->
+        <div class="btn-group ">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            SIGN IN
+          </button>
+          <!--<div id="myDropdown" class="dropdown-content">
+                <button type="button" class="btn btn-Secondary dropdown-toggle dropdown-toggle-split "
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="visually-hidden">Toggle Dropdown</span>
+                </button>-->
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="user/login/login.html">As user</a></li>
+            <li><a class="dropdown-item" href="gym/login/login.html">As Gym</a></li>
+          </ul>
+        </div>&nbsp;
+
+
+
+        <div class="btn-group ">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            SIGN UP
+          </button>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="user/register/register.html">As user</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="gym/register/register.html">As Gym</a>
+            </li>
+          </ul>
+        </div>
+
+
+        <!--</div>-->
+    </div>
+    </nav>
+
+
+    <!-- Title -->
+
+    <!--contininar fluid div is below-->
+    </div>
+
+    <div class="row ">
+      <!--<div class="col-lg-6">
+
+        !--<p class="bi" style="background-image: url('images/arnold.jpg');">-->
+
+      <!--<div class="upar">
+             <h1>"No more excuse! begin your fitness journey today  with our pay-as-you-go plans"</h1>
+                 <button type="button" class="btn btn-dark button" > EXPLORE OUR PLANS</button>
+             !--<button type="button" class="btn btn-outline-light button"><i class="fa-brands fa-google-play"></i> Download</button>-->
+
+      <div class="home">
+        <video autoplay muted loop>
+          <source src="vedio/done2.mp4" type="video/mp4" />
+        </video>
+        <div class="overlay"></div>
+        <div class="home-content">
+          <h1>"No more excuse! begin your fitness journey today with our pay-as-you-go plans"</h1>
+          <div class="middle-line"></div>
+          <!--<button type="button" class="btn btn-dark button" > EXPLORE OUR PLANS</button>-->
+          <a class="btn btn-dark button" href="user/register/register.html" role="button">EXPLORE OUR PLANS</a>
+        </div>
+        <!--</div>-->
+      </div>
+    </div>
+    <!--container fluid original div</div>-->
+
+    </div>
+  </section>
+
+  <!-- Features -->
+
+  <section id="features">
+
+    <div class="row">
+
+      <div class=" box col-lg-4">
+        <i class="fa-solid fa-circle-check fa-4x"></i>
+        <h3>Easy to use.</h3>
+        <p>So easy to use, even all age group could do it.</p>
+      </div>
+      <div class=" box col-lg-4">
+        <i class="fa-solid fa-bullseye fa-4x"></i>
+        <h3>Target</h3>
+        <p>To be healthy; Anytime & Anywhere</p>
+      </div>
+      <div class=" box col-lg-4">
+        <i class="fa-solid fa-heart fa-4x"></i>
+        <h3>Guaranteed to work.</h3>
+        <p>Find the best gym near you or your money back.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Testimonials -->
+
+  <section id="testimonials">
+    <!--using of carousel-->
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <h2>I no longer have to sniff particular gym for excerise. I've found the nearest club on Skfit. Woof.</h2>
+          <img class="testimonial-image" src="images/cbum.jpg" alt="cbum-profile">
+          <em>Chris Bumstead, Canada</em>
+        </div>
+        <div class="carousel-item">
+          <h2 class="testimonial-text">Many used to be so ideal or lazy , but with Skfit's help, they've found the love
+            of their life. I think.</h2>
+          <img class="testimonial-image" src="images/ss.jpeg" alt="admin-profile">
+          <em>Shaik Sameer, India</em>
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+
+  </section>
+
+
+  <!-- Press --
+
+  <section id="press">
+    <img class="logo" src="images/techcrunch.png" alt="tc-logo">
+    <img class="logo" src="images/tnw.png" alt="tnw-logo">
+    <img class="logo" src="images/bizinsider.png" alt="biz-insider-logo">
+    <img class="logo" src="images/mashable.png" alt="mashable-logo">
+
+  </section>
+-->
+
+  <!-- Pricing -->
+
+  <section id="pricing">
+
+
+
+    <h2>A Plan for Every Gym lover</h2>
+    <p>Simple and affordable price plans for you and your family.</p>
+    <!--using of cards-->
+
+    <div class="row">
+
+      <div class="pr-col col-lg-4 col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h3>Silver</h3>
+          </div>
+          <div class="card-body">
+            <h2>Free</h2>
+            <p>5 Form limit</p>
+            <p>100 Monthly Submissions</p>
+            <p>100 MB Available Space</p>
+            <a class="btn btn-dark button" href="user/register/register.html" role="button">Sign Up</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pr-col col-lg-4 col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h3>Platinum</h3>
+          </div>
+          <div class="card-body">
+            <h2>$50 / day</h2>
+            <p>25 Form limit</p>
+            <p>1,000 Monthly Submissions</p>
+            <p>1 GB Available Space</p>
+            <a class="btn btn-dark button" href="user/register/register.html" role="button">Sign Up</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pr-col col-lg-4 col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h3>Gold</h3>
+          </div>
+          <div class="card-body">
+            <h2>$100 / day</h2>
+            <p>50 Form limit</p>
+            <p>2,500 Monthly Submissions</p>
+            <p>10 GB Available Space</p>
+            <p>100,000 Monthly Form Views</p>
+            <a class="btn btn-dark button" href="user/register/register.html" role="button">Sign Up</a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Call to Action -->
+
+  <section id="cta">
+
+    <h3 class="fo">Find the perfect Location of Your healthy Life Today.</h3>
+    <!--<button type="button" class="btn btn-lg btn-dark button"><i class="fa-brands fa-apple"></i> Download</button>
+    <button type="button" class="btn btn-lg btn-outline-light button"><i class="fa-brands fa-google-play"></i>
+      Download</button>-->
+
+  </section>
+  <!--js link-->
+  <script src="index.js" charset="UTF-8"></script>
+
+  <!-- Footer -->
+
+  <footer id="footer">
+
+    <a style="color:black;" href="https://www.instagram.com/shaik.sameer__/?igshid=OTk0YzhjMDVIZA=="
+      class="fo-ic fa-brands fa-instagram instagram"></a>
+    <a style="color:black;" href="https://www.twitter.com/" class="fo-ic fa-brands fa-twitter"></a>
+    <a style="color:black;" href="https://www.facebook.com/" class="fo-ic fa-brands fa-facebook "></a>
+
+    <!--<i class="fo-ic fa-solid fa-envelope"></i>-->
+
+    <p>© Copyright IronFist</p>
+
+  </footer>
+
+
+</body>
+
+</html>
